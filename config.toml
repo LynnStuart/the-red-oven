@@ -1,6 +1,6 @@
-baseurl = "http://example.org"
-title = "Hugo Themes - aether"
-author = "Joe Hutchinson"
+baseurl = "https://the-red-oven.netlify.app"
+title = "The Red Oven"
+author = "Lynn Stuart"
 canonifyurls = true
 paginate = 3
 theme = "aether"
