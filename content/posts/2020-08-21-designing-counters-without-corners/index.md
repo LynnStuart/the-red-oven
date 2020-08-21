@@ -16,7 +16,11 @@ lknf;ofglklsbadfvnIvkls Pour-in-the-Pan Pizza from Milk Street
 
 •	The batter and must rise for at least 4 hrs in a warm spot, 75°.
 •	Mist the baking sheet with cooking spray. The oil alone isn’t enough to prevent sticking. 
-•	Don’t use fresh mozzarella or wet toppings; they contain too much moisture and will make the pizza soggy. Likewise, be sure to drain the juices from the tomatoes.
+•	Don’t use fresh mozzarella or wet toppings; they contain too much moisture and will make the pizza soggy. Likewise, be sure
+
+![Ellen mug here](/images/uploads/best-2020-08-01-img_1849.jpg "Ellen in yard")
+
+ to drain the juices from the tomatoes.
 
 400 gms (2¾ c + 2½ T) bread flour
 2 t sugar
