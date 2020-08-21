@@ -4,7 +4,7 @@ author = "Joe Hutchinson"
 canonifyurls = true
 paginate = 3
 theme = "aether"
-themesDir = "themes" 
+themesDir = "../../" 
 
 [params]
     brand = "aether"
