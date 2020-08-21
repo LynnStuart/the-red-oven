@@ -7,6 +7,9 @@ displayInMenu: false
 displayInList: true
 draft: false
 thumbnail: /images/uploads/2020-08-06-nick-quilt-anna-niece-low-res-copy.jpg
+resources:
+  src: /images/uploads/2020-08-06-nick-quilt-anna-niece-low-res-copy.jpg
+  name: featuredImage
 ---
 lknf;ofglklsbadfvnIvkls Pour-in-the-Pan Pizza from Milk Street 
 6 hrs, 35 minutes active. Makes 13x18 baking sheet, serves 4-6, from Milk Street fall 2020, p19
