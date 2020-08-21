@@ -7,8 +7,8 @@ theme = "aether"
 themesDir = "themes" 
 
 [params]
-    brand = "aether"
-    description = "aether Hugo theme for blogs"
+    brand = "The Red Oven"
+    description = "A blog about..."
     bgimg = "img/ignasi_pattern_s.png"
 
 [markup]
