@@ -2,38 +2,33 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
+local_backend: true
+
 publish_mode: editorial_workflow
 
 # These lines should *not* be indented
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "content/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}/index" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}/index' # Name of markdown file
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Display in Menu", name: "displayInMenu", widget: "boolean", required: false, default: false}
-      - {label: "Display in List", name: "displayInList", widget: "boolean", required: false, default: true}
+      - {label: "Description (appears on preview card)", name: "description", widget: "string"}
+      - {label: "Display in Menu", name: "displayInMenu", widget: "hidden", default: false}
+      - {label: "Display in List", name: "displayInList", widget: "hidden", default: true}
       - {label: "Categories", name: "categories", widget: "list", required: false}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Resources"
-        name: "resources"
-        widget: "object"
+      - label: "Featured Image"
+        name: "featuredImage"
+        widget: "image"
         required: false
-        fields:
-          - {label: "Name", name: "name", widget: "string", required: false}
-          - label: "Source"
-            name: "src"
-            widget: "file"
-            required: false
-            media_library:
-              config:
-                multiple: true
+        media_library:
+          config:
+            multiple: false
+      - {label: "Body", name: "body", widget: "markdown"}
 

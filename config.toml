@@ -6,10 +6,29 @@ paginate = 3
 theme = "aether"
 themesDir = "themes" 
 
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
 [params]
     brand = "The Red Oven"
     description = "A blog about..."
     bgimg = "img/ignasi_pattern_s.png"
+    favicon = ""
+    site_logo = ""
+    facebook = ""
+    twitter = "https://twitter.com/GoHugoIO"
+    instagram = ""
+    youtube = ""
+    github = ""
+    gitlab = ""
+    linkedin = ""
+    mastodon = ""
+    slack = ""
+    stackoverflow = ""
+    rss = ""
 
 [markup]
   [markup.highlight]

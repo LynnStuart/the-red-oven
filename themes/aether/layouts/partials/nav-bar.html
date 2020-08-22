@@ -6,24 +6,44 @@
       {{- $.Site.Title -}}
     {{ end -}}
   </a></h1>
-  <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
-      <span></span>
-      <span></span>
-    </button>
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="{{ .Site.BaseURL }}" class="hamburger-menu-overlay-link">Home</a></li>
-      {{ range where .Site.Pages "Params.displayinmenu" true -}}
-        <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
-      {{ end -}}
-      {{ range $key, $value := .Site.Taxonomies.categories -}}
-      {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
-      <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
-      {{ end }}
-      {{- end }}
-      {{ if eq .Site.Params.rssinmenu true -}}
-      <li><a href="{{ "/index.xml" | absURL }}" class="hamburger-menu-overlay-link">rss</a></li>
-      {{- end }}
-    </ul>
-  </div>
+  <nav class="pv3 ph3 ph4-ns" role="navigation">
+    <div class="flex-l justify-between items-center center">
+      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib">
+        {{ with .Site.Params.site_logo }}
+          <img src="{{ . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+        {{ else }}
+          {{ .Site.Title }}
+        {{ end }}
+      </a>
+      <div class="flex-l items-center">
+        {{ if .Site.Menus.main }}
+          <ul class="pl0 mr3">
+            {{ range .Site.Menus.main }}
+            <li class="list f5 f4-ns fw4 dib pr3">
+              <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ .Name }} page">
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+        {{ $icon_size := "32px" }}
+        {{ with .Param "twitter" }}
+        <a href="{{ . }}" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+          {{ partial "svg/twitter.svg" (dict "size" $icon_size) }}
+        </a>
+        {{ end }}
+        {{ with .Param "youtube" }}
+        <a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr1" title="Youtube link" rel="noopener" aria-label="follow on Youtube——Opens in a new window">
+          {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
+        </a>
+        {{ end }}
+        {{ with .Param "rss" }}
+        <a href="{{ . }}" target="_blank" class="link-transition rss link dib z-999 pt3 pt0-l mr1" title="RSS link" rel="noopener" aria-label="RSS——Opens in a new window">
+          {{ partial "svg/rss.svg" (dict "size" $icon_size) }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
 </nav>

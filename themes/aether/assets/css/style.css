@@ -140,10 +140,14 @@ strong {
     padding: 2em 0;
     margin-bottom: 2em;
     width: 100%;
+}
+.text-content {
+    margin: auto;
+    background-color: white;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    width: 100%;
     max-width: 52rem;
-    border-radius: 0.3rem;
-    transition: transform 0.2s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.2s cubic-bezier(0.25,0.8,0.25,1);
-    box-shadow: 0 0.7rem 1.4rem 0 rgba(0,0,0,0.25), 0 0.5rem 0.5rem 0 rgba(0,0,0,0.22);
 }
 .list-header {
     margin: 6em 0;
@@ -165,7 +169,8 @@ strong {
     line-height: 1.6em;
 }
 .card-container {
-    max-width: 49rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 .card-container > a:first-of-type {
     margin-top: 5em;
@@ -191,9 +196,8 @@ strong {
     object-fit: cover;
 }
 .blog-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    width: 49rem;
+    margin: auto;
 }
 .card-img-container {
     position: relative;
